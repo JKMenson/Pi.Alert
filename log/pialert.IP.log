@@ -1,0 +1,23 @@
+
+Pi.Alert  (2023-10-23)
+---------------------------------------------------------
+Current User: root 
+
+Check Internet IP
+    Timestamp: 2023-11-29 10:51:00
+
+Retrieving Internet IP...
+Traceback (most recent call last):
+  File "/root/pialert/back/pialert.py", line 2786, in <module>
+    sys.exit(main())       
+  File "/root/pialert/back/pialert.py", line 72, in main
+    res = check_internet_IP()
+  File "/root/pialert/back/pialert.py", line 157, in check_internet_IP
+    internet_IP = get_internet_IP()
+  File "/root/pialert/back/pialert.py", line 271, in get_internet_IP
+    cmd_output = subprocess.check_output (curl_args, universal_newlines=True)
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['curl', '-s', 'https://myipv4.p1.opendns.com/get_my_ip']' returned non-zero exit status 6.

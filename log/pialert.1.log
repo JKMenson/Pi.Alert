@@ -1,0 +1,39 @@
+
+Pi.Alert  (2023-10-23)
+---------------------------------------------------------
+Current User: root 
+
+Scan Devices
+    Timestamp: 2023-11-29 10:50:00
+
+Scanning...
+    arp-scan Method...
+    arp-scan: One interface
+    Pi-hole Method...
+        ...Skipped
+    DHCP Leases Method...
+        ...Skipped
+    Fritzbox Method...
+        ...Skipped
+    Mikrotik Method...
+        ...Skipped
+    UniFi Method...
+        ...Skipped
+
+Processing scan results...
+Traceback (most recent call last):
+  File "/root/pialert/back/pialert.py", line 2786, in <module>
+    sys.exit(main())       
+  File "/root/pialert/back/pialert.py", line 82, in main
+    res = scan_network()
+  File "/root/pialert/back/pialert.py", line 502, in scan_network
+    save_scanned_devices (arpscan_devices, cycle_interval)
+  File "/root/pialert/back/pialert.py", line 883, in save_scanned_devices
+    internet_IP = get_internet_IP()
+  File "/root/pialert/back/pialert.py", line 271, in get_internet_IP
+    cmd_output = subprocess.check_output (curl_args, universal_newlines=True)
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['curl', '-s', 'https://myipv4.p1.opendns.com/get_my_ip']' returned non-zero exit status 6.

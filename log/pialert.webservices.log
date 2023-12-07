@@ -1,0 +1,20 @@
+
+Pi.Alert  (2023-10-23):
+---------------------------------------------------------
+Current User: root 
+
+Monitor Web-Services
+    Timestamp: 2023-11-25 04:40:16
+    Get Services List
+    Flush previous scan results
+
+Start Services Monitoring
+
+ Timestamp          | StatusCode | ResponseTime | URL 
+-----------------------------------------------------------------
+
+**************** No site(s) to monitor!! ****************
+
+Services Monitoring Changes:
+    Changed StatusCodes.....: 0
+    Changed Reachability....: 0
